@@ -1,0 +1,71 @@
+
+while [CONDITION]
+do
+  [COMMANDS]
+done
+
+
+
+
+i=0
+
+while [ $i -le 2 ]
+do
+  echo Number: $i
+  ((i++))
+done
+
+
+Infinite while Loop
+
+while :
+do
+  echo "Press <CTRL+C> to exit."
+  sleep 1
+done
+
+single-line equivalent
+while :; do echo 'Press <CTRL+C> to exit.'; sleep 1; done
+
+
+Read a File Line By Line
+
+file=/etc/passwd
+
+while read -r line; do
+  echo $line
+done < "$file"
+
+
+Break and Continue Statements
+
+i=0
+
+while [ $i -lt 5 ]
+do
+  echo "Number: $i"
+  ((i++))
+  if [[ "$i" == '2' ]]; then
+    break
+  fi
+done
+
+echo 'All Done!'
+
+
+
+
+i=0
+
+while [ $i -lt 5 ]
+do
+  ((i++))
+  if [[ "$i" == '2' ]]; then
+    continue
+  fi
+  echo "Number: $i"
+done
+
+echo 'All Done!'
+
+
