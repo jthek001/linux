@@ -1,0 +1,12 @@
+
+
+The first of the commands below starts the program abcd in the background in such a way that the subsequent logout does not stop it.
+# nohup abcd &
+# exit
+
+
+Note that these methods prevent the process from being sent a 'stop' signal on logout, but if input/output is being received for these 
+standard I/O files (stdin, stdout, or stderr), they will still hang the terminal.[1] See Overcoming hanging, below.
+
+nohup is often used in combination with the nice command to run processes on a lower priority.
+# nohup nice abcd &
