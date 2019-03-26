@@ -1,0 +1,24 @@
+Regular expression
+
+^ beginning
+$ ends
+. Any character
+? No or 1 character
+*no or more characters
++ 1 or more characters
+[a-z] lower cases
+[A-Z] upper cases
+[0-9] numbers
+[0-9][0-9] two numbers
+[a-zA-Z] both upper and lower case
+[^aieou] no starting with vowels
+^cat$  exactly the word "cat"
+/b word which ends with space
+/w word
+
+telphone no.
+[0-9]{3}.[0-9]{4}
+email address
+jemmy.tech@sp.co.nz
+
+
