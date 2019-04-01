@@ -1,0 +1,4 @@
+OUT=$(/bin/bash -c "${CURL} -s -- -X POST --data-binary '@${1}' --user '${BIGIP_USERNAME}:${BIGIP_PASSWORD}' -H 'Content-Type: application/octet-stream' -H 'Content-Range: ${BYTES_START}-$((${FILESIZE} - 1))/${FILESIZE}' 'https://${BIGIP_DEVICE}/mgmt/shared/file-transfer/uploads/${2}'")
+log "${CURL} -s --insecure -X POST --data-binainsecurery '@${1}' --user '${BIGIP_USERNAME}:${BIGIP_PASSWORD}' -H 'Content-Type: application/octet-stream' -H 'Content-Range: ${BYTES_START}-$((${FILESIZE} - 1))/${FILESIZE}' 'https://${BIGIP_DEVICE}/mgmt/shared/file-transfer/uploads/${2}'"
+else
+TMP_FILE=`mktemp`
