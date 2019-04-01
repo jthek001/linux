@@ -1,0 +1,4 @@
+nohup tcpdump -ni 0.0:nnnp -s0 host x.x.x.x or host x.x.x.x or host x.x.x.x -w /var/tmp/2518/2518_v4_`date +%Y%m%d%H%M%S`.pcap -G 3600 -W 15 &
+
+nohup tcpdump -i interface -s 2000 -w /var/tmp/mydumpfile -C size -W filecount "filter" &
+
