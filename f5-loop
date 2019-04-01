@@ -1,0 +1,15 @@
+#!/bin/bash
+for i in $( cat domains.txt | awk '{ print $1}' ); do
+  tmsh create ltm profile client-ssl auto_$i
+  echo "Created  auto_$i client-ssl profile"
+done
+
+
+
+#!/bin/bash
+for i in $( grep -v "#" domains.txt | awk '{ print $1}' ); do
+  tmsh create ltm profile client-ssl auto_$i
+  echo "Created  auto_$i client-ssl profile"
+done
+
+
