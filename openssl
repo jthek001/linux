@@ -1,0 +1,7 @@
+echo | openssl s_client -showcerts -servername app1.example.com -connect 192.0.2.10:443 2>/dev/null |grep "subject="
+subject=/CN=app1.example.com
+[demo]$ echo | openssl s_client -showcerts -servername app2.example.com -connect 192.0.2.10:443 2>/dev/null |grep "subject="
+subject=/CN=app2.example.com
+
+
+
