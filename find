@@ -1,1 +1,2 @@
 find / -type f iname test
+find . -type f -exec ls -la {} \; | cut -d ' ' -f 6- >$(date "+%Y.%m.%d-%H.%M.%S").ver 
